@@ -282,7 +282,7 @@ export default class Tree {
     isBalanced() {
         const leftHeight = this._findHeight(this.tree.left);
         const rightHeight = this._findHeight(this.tree.right);
-        const diff = Math.sqrt((leftHeight - rightHeight) ** 2);
+        const diff = Math.abs(leftHeight - rightHeight);
         if(diff <= 1) {
             return true;
         } else {
